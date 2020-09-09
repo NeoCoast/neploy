@@ -1,0 +1,55 @@
+{
+  "name": "neploy",
+  "description": "Deploy helper",
+  "version": "0.0.1",
+  "author": "",
+  "bin": {
+    "neploy": "./bin/run"
+  },
+  "bugs": "https://github.com/maurocen/neploy/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "chalk": "^4.1.0",
+    "cli-ux": "^5.5.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-oclif": "^3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "globby": "^10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/maurocen/neploy",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "neploy",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "maurocen/neploy",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
