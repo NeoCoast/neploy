@@ -1,12 +1,12 @@
 {
-  "name": "neploy",
+  "name": "@neocoast/neploy",
   "description": "Deploy helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "",
   "bin": {
     "neploy": "./bin/run"
   },
-  "bugs": "https://github.com/maurocen/neploy/issues",
+  "bugs": "https://github.com/neocoast/neploy/issues",
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1",
@@ -31,7 +31,7 @@
     "/oclif.manifest.json",
     "/src"
   ],
-  "homepage": "https://github.com/maurocen/neploy",
+  "homepage": "https://github.com/neocoast/neploy",
   "keywords": [
     "oclif"
   ],
@@ -44,7 +44,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "maurocen/neploy",
+  "repository": "neocoast/neploy",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",

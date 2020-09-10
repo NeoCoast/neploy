@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/maurocen/neploy">
+  <a href="https://github.com/neocoast/neploy">
     <img src="./public/rocket.svg" width="250" />
   </a>
 </p>
