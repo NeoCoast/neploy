@@ -1,5 +1,4 @@
 module.exports = {
-  aws_profile: "********",
   frontend: {
     build_command: "********",
     build_dir: "********",

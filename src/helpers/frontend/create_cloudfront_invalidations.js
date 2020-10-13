@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 const chalk = require('chalk');
-const confirm = require('./confirm');
+const confirm = require('../confirm');
 
 const create_distribution_invalidation = async (
   cloudfront_distribution,

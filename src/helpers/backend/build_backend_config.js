@@ -1,6 +1,6 @@
-const read_config = require('./read_config');
+const read_config = require('../read_config');
 
-const build_frontend_config = async (env) => {
+const build_backend_config = async (env) => {
   const workingDir = process.cwd();
 
   const config_data = await read_config(`${workingDir}/.neployrc`);
@@ -8,16 +8,12 @@ const build_frontend_config = async (env) => {
   const {
     [env]: {
       aws_profile,
-      frontend: config,
+      backend: config,
     },
   } = config_data;
 
   const default_config = {
-    build_command: 'yarn build',
-    build_dir: './dist',
-    s3_buckets: [],
-    cloudfront_distributions: [],
-    use_delete: false,
+    eb_apps: [],
     aws_profile: 'default',
   };
 
@@ -28,4 +24,4 @@ const build_frontend_config = async (env) => {
   return { ...default_config, ...global_config, ...config };
 };
 
-module.exports = build_frontend_config;
+module.exports = build_backend_config;

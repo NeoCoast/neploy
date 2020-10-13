@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const { execSync } = require('child_process');
-const confirm = require('./confirm');
+const confirm = require('../confirm');
 
 const sync_bucket = async (build_dir, region, bucket, use_delete, profile, force) => {
   let command = `REGION=${region} aws s3 sync ${build_dir} s3://${bucket} --profile=${profile}`;
