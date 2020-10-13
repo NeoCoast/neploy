@@ -1,10 +1,10 @@
 const { Command, flags } = require('@oclif/command');
 const chalk = require('chalk');
-const build_frontend = require('../helpers/build_frontend');
-const build_frontend_config = require('../helpers/build_frontend_config');
-const upload_to_s3 = require('../helpers/upload_to_s3');
+const build_frontend = require('../helpers/frontend/build_frontend');
+const build_frontend_config = require('../helpers/frontend/build_frontend_config');
+const upload_to_s3 = require('../helpers/frontend/upload_to_s3');
 const confirm = require('../helpers/confirm');
-const create_cloudfront_invalidations = require('../helpers/create_cloudfront_invalidations');
+const create_cloudfront_invalidations = require('../helpers/frontend/create_cloudfront_invalidations');
 
 class FrontendCommand extends Command {
   async run() {

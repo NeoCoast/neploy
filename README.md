@@ -26,6 +26,7 @@ neploy init <options>
 
 ### Options
 
+- --interactive (_optional_): Launch interactive configuration helper (frontend only)
 - --no-backend (_optional_): Do not include backend configuration
 - --no-frontend (_optional_):  Do not include frontend configuration
 
@@ -42,6 +43,24 @@ neploy frontend <options>
 - --no-invalidation (_optional_): Skip creating CloudFront invalidations
 - --no-upload (_optional_): Skip uploading to S3 buckets
 - --force, -f (_optional_): Do not ask for confirmation on any step
+
+## TO-DO list
+
+- [ ] Add backend support
+  - [ ] Deploy to ElasticBeanstalk
+    - [ ] Synchronize ElasticBeanstalk environment variables with .env
+  - [ ] Deploy to EC2
+- [ ] Create S3 buckets if they do not exist
+- [ ] Make `init` command interactive
+  - [x] Frontend
+  - [ ] Backend
+
+## Want to contribute?
+
+1. Fork this repository.
+2. Clone your fork.
+3. Write your changes.
+4. Submit a PR.
 
 ---
 

@@ -1,8 +1,18 @@
-const { cli } = require('cli-ux');
+const inquirer = require('inquirer');
 const chalk = require('chalk');
 
 const confirm = async () => {
-  if (!(await cli.confirm('Is this ok?'))) {
+  const { ok } = await inquirer.prompt(
+    [
+      {
+        type: 'confirm',
+        default: true,
+        name: 'ok',
+        message: 'Is this ok?'
+      },
+    ]
+  )
+  if (!ok) {
     console.log(`\n${chalk.bold.redBright('\u{26d4}')} Process stopped by user.`);
     process.exit(0);
   }

@@ -1,7 +1,7 @@
 {
   "name": "@neocoast/neploy",
   "description": "Deploy helper",
-  "version": "0.0.2",
+  "version": "0.0.3-alpha-2",
   "author": "",
   "bin": {
     "neploy": "./bin/run"
@@ -12,7 +12,9 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "chalk": "^4.1.0",
-    "cli-ux": "^5.5.0"
+    "cli-ux": "^5.5.0",
+    "inquirer": "^7.3.3",
+    "js-yaml": "^3.14.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
